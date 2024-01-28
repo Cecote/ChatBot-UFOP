@@ -1,15 +1,17 @@
+import { MensagemEnviada } from "./MensagemEnviada";
+
 type Props = {
     desabilitado: boolean;
-    conversandoNoChat: (desabilitado, message: string) => void;
+    conversandoNoChat: (message: string) => void;
 }
 
-export const RodapeDaPagina = ({ conversandoNoChat }: Props) => {
+export const RodapeDaPagina = ({ desabilitado, conversandoNoChat }: Props) => {
     return (
-        <footer className="w-full border-t border-t-white p-2">
+        <footer className="w-full p-2">
             <div className="max-w-4xl m-auto">
                 <MensagemEnviada
                     desabilitado={desabilitado}
-                    onSend={conversandoNoChat}
+                    enviar={conversandoNoChat}
                 />
             </div>
         </footer>

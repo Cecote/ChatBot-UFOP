@@ -8,8 +8,6 @@ type Props = {
 
 export const MensagemEnviada = ({ desabilitado, enviar }: Props) => {
 
-    const textoEl = useRef<HTMLTextAreaElement>(null);
-
     const [texto, selecionarTexto] = useState('');
 
     const enviarMensagem = () => {
@@ -29,7 +27,6 @@ export const MensagemEnviada = ({ desabilitado, enviar }: Props) => {
     return (
         <div className={`flex border border-white bg-[#747c84] p-2 rounded-md ${desabilitado && 'opacity-50'}`}>
             <textarea
-                ref={textoEl}
                 className="flex-1 borde-0 bg-transparent resize-none outline-none h-7 max-h-48 overflow-y-auto"
                 placeholder="Digite uma mensagem"
                 value={texto}
@@ -38,8 +35,8 @@ export const MensagemEnviada = ({ desabilitado, enviar }: Props) => {
                 disabled={desabilitado}
             ></textarea>
 
-            <div onClick={enviarMensagem} className="">
-                <IconMailSendLine width={14} height={14} />
+            <div onClick={enviarMensagem} className={`self-end p-1 cursor-pointer rounded ${texto.length ? 'opacity-100 hover:bg-black/20' : 'opacity-20'}`}>
+                <IconMailSendLine width={20} height={20} />
             </div>
         </div>
     );
