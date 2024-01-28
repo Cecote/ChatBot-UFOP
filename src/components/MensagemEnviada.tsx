@@ -1,6 +1,7 @@
 import IconMailSendLine from "./icons/IconeDeEnviado";
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
 
+
 type Props = {
     desabilitado: boolean;
     enviar: (mensagem: string) => void;
