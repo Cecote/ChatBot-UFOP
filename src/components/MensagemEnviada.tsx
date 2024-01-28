@@ -1,5 +1,5 @@
 import IconMailSendLine from "./icons/IconeDeEnviado";
-import { KeyboardEvent, useRef, useState } from "react";
+import { KeyboardEvent, useEffect, useRef, useState } from "react";
 
 type Props = {
     desabilitado: boolean;
@@ -9,6 +9,15 @@ type Props = {
 export const MensagemEnviada = ({ desabilitado, enviar }: Props) => {
 
     const [texto, selecionarTexto] = useState('');
+    const caixaDeTextoAdaptativa = useRef<HTMLTextAreaElement>(null);
+
+    useEffect(() => {
+        if (caixaDeTextoAdaptativa.current) {
+            caixaDeTextoAdaptativa.current.style.height = '0px';
+            let scrollHeight = caixaDeTextoAdaptativa.current.scrollHeight;
+            caixaDeTextoAdaptativa.current.style.height = scrollHeight + 'px';
+        }
+    }, [texto, caixaDeTextoAdaptativa]);
 
     const enviarMensagem = () => {
         if (!desabilitado && texto.trim() !== '') {
@@ -27,6 +36,7 @@ export const MensagemEnviada = ({ desabilitado, enviar }: Props) => {
     return (
         <div className={`flex border border-white bg-[#747c84] p-2 rounded-md ${desabilitado && 'opacity-50'}`}>
             <textarea
+                ref={caixaDeTextoAdaptativa}
                 className="flex-1 borde-0 bg-transparent resize-none outline-none h-7 max-h-48 overflow-y-auto"
                 placeholder="Digite uma mensagem"
                 value={texto}
