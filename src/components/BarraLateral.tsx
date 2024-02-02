@@ -18,13 +18,17 @@ export const BarraLateral = ({ open, fecharBarraLateral, limpar, children, novoC
     return (
         <section className={`fixed left-0 top-0 bottom-0 text-black ${open ? 'w-screen bg-[#747c84]' : 'w-0'} md:w-64 md:static`}>
 
-            <div className={`transition-all duration-200 flex h-screen ${open ? 'ml-0' : '-ml-96'} md:ml-0`}>
+            <div className={`transition-all duration-200 flex h-screen ${open ? 'mr-0' : '-ml-96'} md:ml-0`}>
 
                 <div className="flex flex-col w-128 bg-[#942c44] p-1 text-white">
 
-                    <button style={{ fontSize: '14px' }} onClick={novoChat} className="p-3 rounded-md border border-white hover:bg-gray-900/20">
-                        Novo Chat
-                    </button>
+                    <div className="border-b border-white-700 pb-3 pr-2 ">
+                        <img
+                            style={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%' }}
+                            src="https://ufop.br/sites/default/files//site_logo_ufop_txtwte_0.png"
+                        />
+                    </div>
+
 
                     <nav className="flex-1 pt-2 overflow-y-auto">
                         {children}
@@ -32,7 +36,7 @@ export const BarraLateral = ({ open, fecharBarraLateral, limpar, children, novoC
 
                     <div className="border-t border-white-700 pt-2 ">
                         <BotaoDeApagar
-                            conteudo="=>Limpar histórico de conversas"
+                            conteudo="=> Limpar conversas"
                             icone={<IconTrash width={16} height={16} />}
                             onClick={limpar}
                         />
