@@ -7,6 +7,7 @@ import { RodapeDaPagina } from "@/components/RodapeDaPagina";
 import { Chat } from "@/types/Chat";
 import { v4 as idV4 } from 'uuid'
 import { useEffect, useState } from "react";
+import { openai } from "@/utils/openai";
 
 const Page = () => {
   const [barraLateralAberta, abrirBarraLateral] = useState(false);
@@ -19,13 +20,20 @@ const Page = () => {
     }
   }, [CarregandoResposta]);
 
-  const pegarRespostaBot = () => {
-    setTimeout(() => {
-      chatAtual?.mensagens.push({
-        id: idV4(), author: 'bot', body: 'O bot ta pensando, calma !'
-      });
-      botRespondendo(false);
-    }, 2000);
+  const pegarRespostaBot = async () => {
+    if (chatAtual) {
+      const converterMensagens = openai.transformarMensagens(chatAtual.mensagens);
+      const retorno = await openai.generate(converterMensagens);
+
+      if (retorno) {
+        chatAtual.mensagens.push({
+          id: idV4(), author: 'bot', body: retorno
+        });
+      }
+    }
+
+    botRespondendo(false);
+
   }
 
   const comandoAbrirBarraLateral = () => {
@@ -65,6 +73,7 @@ const Page = () => {
     botRespondendo(true);
 
   }
+
 
   return (
     <main className="flex min-h-screen bg-[#747c84]">
