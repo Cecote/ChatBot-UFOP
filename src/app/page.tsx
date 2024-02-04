@@ -73,7 +73,7 @@ const Page = () => {
         open={barraLateralAberta}
         fecharBarraLateral={fecharBarraLateral}
         limpar={limparHistorico}
-        novoChat={abrirNovoChat}
+        pesquisaRapida={enviarMensagem}
       >
 
       </BarraLateral>

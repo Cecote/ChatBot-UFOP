@@ -5,64 +5,26 @@ export const ChatVazio = () => {
         <div className="m-5">
             <h3 className="text-4xl font-bold text-center my-8">Chatbot-UFOP</h3>
 
-            <div className="flex flex-col md:flex-row gap-5 m-auto mb-8 md:max-w-4xl">
+            <div className="flex flex-col justify-center md:flex-row gap-5 m-auto mb-8 md:max-w-4xl">
                 <div>
                     <div className="flex justify-center items-center text-lg mb-3">
                         <IconBook width={24} height={24} className="mr-3" />
                         Exemplo
                     </div>
                     <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
+                        "Exemplo do que pode ser pesquisado"
                     </div>
                     <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
+                        "Alguma curiosidade interessante sobre a universidade"
                     </div>
                     <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
+                        "Possíveis eventos que estão com datas próximas"
                     </div>
                     <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                </div>
-                <div>
-                    <div className="flex justify-center items-center text-lg mb-3">
-                        <IconBook width={24} height={24} className="mr-3" />
-                        Exemplo
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                </div>
-                <div>
-                    <div className="flex justify-center items-center text-lg mb-3">
-                        <IconBook width={24} height={24} className="mr-3" />
-                        Exemplo
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
-                    </div>
-                    <div className="bg-white/5 rounded text-center text-sm text-white mb-3 p-3">
-                        "Explique o sentido da vida em termos simples"
+                        "Etc Etc Etc..."
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 }
