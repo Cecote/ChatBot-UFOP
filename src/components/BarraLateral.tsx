@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import IconCloseCircle from "./icons/IconeDeFechar";
 import IconArrowBarLeft from "./icons/IconeDeFechar";
 import { BotaoDeApagar } from "./BotaoDeApagar";
 import { Limelight } from "next/font/google";
