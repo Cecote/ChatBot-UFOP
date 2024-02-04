@@ -29,7 +29,7 @@ export const BarraLateral = ({ open, fecharBarraLateral, limpar, children, novoC
                     </div>
 
                     <div className="flex justify-center font-bold pt-3 ">
-                        Pesquisas frequentes:
+                        Pesquisas rápidas:
                     </div>
 
                     <nav className="flex-1 pt-2 overflow-y-auto">
@@ -38,7 +38,7 @@ export const BarraLateral = ({ open, fecharBarraLateral, limpar, children, novoC
 
                     <div className="border-t border-white-700 pt-2 ">
                         <BotaoDeApagar
-                            conteudo="=> Limpar conversas"
+                            conteudo="=> Limpar conversa"
                             icone={<IconTrash width={16} height={16} />}
                             onClick={limpar}
                         />

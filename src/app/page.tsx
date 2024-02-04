@@ -50,7 +50,7 @@ const Page = () => {
   const enviarMensagem = (mensagem: string) => {
     if (chatAtual === undefined) {
       selecionarChat({
-        id: '1',
+        id: idV4(),
         titulo: 'conversa',
         mensagens: [
           { id: idV4(), author: 'usuario', body: mensagem }
