@@ -29,6 +29,9 @@ export const BarraLateral = ({ open, fecharBarraLateral, limpar, children, novoC
                         />
                     </div>
 
+                    <div className="flex justify-center font-bold pt-3 ">
+                        Pesquisas frequentes:
+                    </div>
 
                     <nav className="flex-1 pt-2 overflow-y-auto">
                         {children}

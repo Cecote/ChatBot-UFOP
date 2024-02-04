@@ -15,7 +15,7 @@ const Page = () => {
     titulo: 'Teste',
     mensagens: [
       { id: '99', author: 'usuario', body: 'Opa, tudo certo?' },
-      { id: '100', author: 'bot', body: 'Vai tomar banho?' },
+      { id: '100', author: 'bot', body: 'Tudo sim, e com você?' },
     ]
   });
 
