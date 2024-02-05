@@ -44,10 +44,8 @@ const Page = () => {
     abrirBarraLateral(false);
   }
 
-  const abrirNovoChat = () => {
-
-  }
-  const limparHistorico = () => {
+  
+  const limparConversa = () => {
     if (CarregandoResposta) {
       return;
     }
@@ -59,14 +57,17 @@ const Page = () => {
     if (chatAtual === undefined) {
       selecionarChat({
         id: idV4(),
-        titulo: 'conversa',
         mensagens: [
-          { id: idV4(), author: 'usuario', body: mensagem }
+          { id: idV4(), 
+            author: 'usuario', 
+            body: mensagem }
         ]
       });
     } else {
       chatAtual?.mensagens.push({
-        id: idV4(), author: 'usuario', body: mensagem
+        id: idV4(), 
+        author: 'usuario', 
+        body: mensagem
       });
     }
 
@@ -81,7 +82,7 @@ const Page = () => {
       <BarraLateral
         open={barraLateralAberta}
         fecharBarraLateral={fecharBarraLateral}
-        limpar={limparHistorico}
+        limpar={limparConversa}
         pesquisaRapida={enviarMensagem}
       >
 
